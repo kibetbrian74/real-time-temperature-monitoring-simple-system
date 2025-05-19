@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Real-time Monitoring</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f6f7fb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+      header {
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 2rem 0 1rem 0;
+        color: #22223b;
+      }
+      #current-temp {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #4e54c8;
+      }
+      #chart-container {
+        width: 95vw;
+        max-width: 600px;
+        height: 350px;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,0.06);
+        padding: 1.2rem 1rem 1rem 1rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Temperature Real-time Monitoring</header>
+    <div id="current-temp">Current temperature: <span id="temp-value">--</span> °C</div>
+    <div id="chart-container">
+      <canvas id="tempChart"></canvas>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
